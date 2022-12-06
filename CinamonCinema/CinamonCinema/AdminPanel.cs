@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,12 +31,24 @@ namespace CinamonCinema
         private TextBox box_user;
         private Label label6;
         private Button Kustuta_button_Click;
+        private ListBox listBox1;
+        private TextBox textBox1;
         OpenFileDialog openfiledialog1;
-        public AdminPanel()
+        public AdminPanel(List<string>arr)
         {
             InitializeComponent();
             Naita_Andmed();
             Naita_Andmed1();
+            listBox1.DataSource = arr;
+            Button picx = new Button()
+            {
+                Size = new Size(50, 50),
+                Location = new Point(800, 70),
+            };
+            picx.Click += (e, s) => {
+                arr.Add(textBox1.Text);
+                listBox1.DataSource = arr;
+            };
         }
         public void Naita_Andmed()
         {
@@ -123,6 +138,8 @@ namespace CinamonCinema
             this.box_user = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Kustuta_button_Click = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.login_data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.film_data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
@@ -249,10 +266,27 @@ namespace CinamonCinema
             this.Kustuta_button_Click.UseVisualStyleBackColor = true;
             this.Kustuta_button_Click.Click += new System.EventHandler(this.Kustuta_button_Click_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(473, 234);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(337, 212);
+            this.listBox1.TabIndex = 16;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(463, 158);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 17;
+            // 
             // AdminPanel
             // 
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(926, 524);
+            this.ClientSize = new System.Drawing.Size(960, 524);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.Kustuta_button_Click);
             this.Controls.Add(this.btn_admin);
             this.Controls.Add(this.box_pas);

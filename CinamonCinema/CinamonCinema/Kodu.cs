@@ -83,7 +83,7 @@ namespace CinamonCinema
             if (dt.Rows[0][0].ToString() == "1")
             {
                 this.Hide();
-                AdminPanel f = new AdminPanel();
+                AdminPanel f = new AdminPanel(arr);
                 f.ShowDialog();
             }
             else

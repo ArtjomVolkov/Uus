@@ -63,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(221, 31);
+            this.label1.Location = new System.Drawing.Point(224, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 0;
@@ -270,7 +270,7 @@
             // lbl_film
             // 
             this.lbl_film.AutoSize = true;
-            this.lbl_film.Location = new System.Drawing.Point(276, 31);
+            this.lbl_film.Location = new System.Drawing.Point(279, 34);
             this.lbl_film.Name = "lbl_film";
             this.lbl_film.Size = new System.Drawing.Size(0, 13);
             this.lbl_film.TabIndex = 20;

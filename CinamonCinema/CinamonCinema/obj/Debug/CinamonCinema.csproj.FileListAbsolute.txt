@@ -81,3 +81,21 @@ C:\Users\opilane\Source\Repos\Uus\CinamonCinema\CinamonCinema\obj\Debug\CinamonC
 C:\Users\opilane\Source\Repos\Uus\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.Seanss.resources
 C:\Users\opilane\Source\Repos\Uus\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.Email.resources
 C:\Users\opilane\Source\Repos\Uus\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.Info.resources
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\bin\Debug\Database1.mdf
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\bin\Debug\Database1_log.ldf
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\bin\Debug\CinamonCinema.exe.config
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\bin\Debug\CinamonCinema.exe
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\bin\Debug\CinamonCinema.pdb
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.csproj.AssemblyReference.cache
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.csproj.SuggestedBindingRedirects.cache
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.AdminPanel.resources
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.Kodu.resources
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.Pilet.resources
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.Seanss.resources
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.Email.resources
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.Info.resources
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.Properties.Resources.resources
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.csproj.GenerateResource.cache
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.csproj.CoreCompileInputs.cache
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.exe
+C:\Users\opilane\source\repos\Volkov TARpv21\Cino\CinamonCinema\CinamonCinema\obj\Debug\CinamonCinema.pdb

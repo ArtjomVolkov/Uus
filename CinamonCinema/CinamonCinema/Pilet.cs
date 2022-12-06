@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
 using System.Collections.Generic;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CinamonCinema
 {
@@ -15,6 +16,8 @@ namespace CinamonCinema
         int maxRows, maxColumns;
         List<string> arr_poilet;
         PictureBox[,] _arr;
+        int hind = 10;
+        private double result = 0f;
         Image img_seat = Image.FromFile("../../Koht/" + "seat.jpg"),
         img_seat_choose = Image.FromFile("../../Koht/" + "seat_choose.jpg"),
         img_seat_bought = Image.FromFile("../../Koht/" + "seat_bought.jpg");
@@ -45,11 +48,12 @@ namespace CinamonCinema
             this.Size = new Size(maxColumns * 40 + 40, maxRows * 50 + 90);
             button1.Location = new Point(12, maxRows * 50 + 25);
             button2.Location = new Point(82, maxRows * 50 + 25);
+            textBox1.Location = new Point(150, maxRows * 50 + 25);
+            textBox1.Text = string.Format("{0:f2} $", result);
             this.Text = name;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-
             for (int i = 0; i < maxRows; i++)
             {
                 Label label = new Label() { 
@@ -90,7 +94,10 @@ namespace CinamonCinema
             }
             file.Close();
         }
-
+        private void Result()
+        {
+            result += hind;
+        }
         private void Form2_Click(object s, EventArgs e)
         {
             PictureBox pic = s as PictureBox;
@@ -135,6 +142,7 @@ namespace CinamonCinema
                     {
                         if (_arr[i, j].Image == img_seat_choose)
                         {
+                            Result();
                             t++;
                             _arr[i, j].Image = img_seat_bought;
                             StreamWriter pilet = new StreamWriter("../../Pilet/" + "Pilet" + t.ToString() + "rida" + i.ToString() + "koht" + j.ToString() + ".txt");
@@ -160,12 +168,17 @@ namespace CinamonCinema
                     }
                     text += "\n";
                 }
-                using (StreamWriter file = new StreamWriter("../../Pilet/" + name + ".txt"))
+                using (StreamWriter file = new StreamWriter("../../Saal/" + name + ".txt"))
                 {
                     file.WriteLine(text);
                     file.Close();
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void SaadaBilet()

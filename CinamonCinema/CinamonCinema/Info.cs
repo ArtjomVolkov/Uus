@@ -38,7 +38,6 @@ namespace CinamonCinema
         {
             
             name = nAme;
-            arrs = arr.ToString();
             this.Text = name;
             InitializeComponent();
             this.MaximizeBox = false;
@@ -57,6 +56,9 @@ namespace CinamonCinema
             };
             if (name=="odin_doma")
             {
+                lbl_film.Text = "Üksinda kodus";
+                kestus.Text = "1:38 tundi";
+                zanr.Text = "Komöödia";
                 treiler_btn.Click += (e, s) => {
                     var prs = new ProcessStartInfo("chrome.exe");
                     prs.Arguments = "https://www.youtube.com/watch?v=bBU_64CTNsw";
@@ -75,6 +77,9 @@ namespace CinamonCinema
                 };
             }
             else if (name == "ma4o"){
+                lbl_film.Text = "Macho ja nohik";
+                kestus.Text = "1:33 tundi";
+                zanr.Text = "Komöödia";
                 treiler_btn.Click += (e, s) => {
                     var prs = new ProcessStartInfo("chrome.exe");
                     prs.Arguments = "https://www.youtube.com/watch?v=_p-Its6AzM4";
@@ -94,6 +99,9 @@ namespace CinamonCinema
             }
             else if (name == "time_for_me")
             {
+                lbl_film.Text = "Aega iseendale";
+                kestus.Text = "1:51 tundi";
+                zanr.Text = "Komöödia";
                 treiler_btn.Click += (e, s) => {
                     var prs = new ProcessStartInfo("chrome.exe");
                     prs.Arguments = "https://www.youtube.com/watch?v=Mmq_NVwLN_g";
@@ -113,6 +121,9 @@ namespace CinamonCinema
             }
             else if (name == "devnaja_smena")
             {
+                lbl_film.Text = "Päevane vahetus";
+                kestus.Text = "1:03 tundi";
+                zanr.Text = "Komöödia";
                 treiler_btn.Click += (e, s) => {
                     var prs = new ProcessStartInfo("chrome.exe");
                     prs.Arguments = "https://www.youtube.com/watch?v=GN_IwBptKi4";
@@ -132,6 +143,7 @@ namespace CinamonCinema
             }
             else if (name == "vegas")
             {
+                lbl_film.Text = "Pohmelus";
                 kestus.Text = "1:30 tundi";
                 zanr.Text = "Komöödia";
                 treiler_btn.Click += (e, s) => {
@@ -229,18 +241,21 @@ namespace CinamonCinema
             Hide();
         }
 
+        private void Info_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Seanss form3 = new Seanss(name);
             form3.Show();
         }
 
-        private void Info_Load(object sender, EventArgs e)
+        /*private void Info_Load(object sender, EventArgs e)
         {
-            if (name = arrs)
+            if (name.ToString() == label7.Text)
             {
-
-            }
             connect.Open();
             str = "select * from film";
             com = new SqlCommand(str, connect);
@@ -274,6 +289,7 @@ namespace CinamonCinema
             info_lbl.Text = reader3["info"].ToString();
             reader3.Close();
             connect.Close();
-        }
+            }
+        }*/
     }
 }
