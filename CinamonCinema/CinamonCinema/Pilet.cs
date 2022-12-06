@@ -23,6 +23,7 @@ namespace CinamonCinema
         img_seat_bought = Image.FromFile("../../Koht/" + "seat_bought.jpg");
         public Pilet(string nAme, int maxRowsS, int maxColumnsS, int seans)
         {
+            
             name = nAme;
             maxRows = maxRowsS;
             maxColumns = maxColumnsS;
@@ -48,9 +49,9 @@ namespace CinamonCinema
             this.Size = new Size(maxColumns * 40 + 40, maxRows * 50 + 90);
             button1.Location = new Point(12, maxRows * 50 + 25);
             button2.Location = new Point(82, maxRows * 50 + 25);
-            textBox1.Location = new Point(150, maxRows * 50 + 25);
-            textBox1.Text = string.Format("{0:f2} $", result);
+            textBox1.Location = new Point(180, maxRows * 50 + 25);
             this.Text = name;
+            textBox1.Text = string.Format("{0} $", result);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -96,7 +97,7 @@ namespace CinamonCinema
         }
         private void Result()
         {
-            result += hind;
+            result = result + hind;
         }
         private void Form2_Click(object s, EventArgs e)
         {
@@ -105,6 +106,8 @@ namespace CinamonCinema
             {
                 if (pic.Image == img_seat_choose)
                 {
+                    result -= 10;
+                    textBox1.Text = string.Format("{0} $", result);
                     pic.Image = img_seat;
                     var breakk = true;
                     for (int i = 0; i < maxRows; i++)
@@ -122,6 +125,8 @@ namespace CinamonCinema
                 }
                 else
                 {
+                    result += 10;
+                    textBox1.Text = string.Format("{0} $", result);
                     pic.Image = img_seat_choose;
                     button1.Enabled = true;
                 }
@@ -132,7 +137,7 @@ namespace CinamonCinema
         {
             string text = "";
             arr_poilet = new List<string>();
-            var vastus = MessageBox.Show("Kas oled kindel?", "Cinamon kusib", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var vastus = MessageBox.Show($"Kas oled kindel?\nKokku on: {result} euro.","Cinamon kusib", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (vastus == DialogResult.Yes)
             {
                 int t = 0;
@@ -142,7 +147,8 @@ namespace CinamonCinema
                     {
                         if (_arr[i, j].Image == img_seat_choose)
                         {
-                            Result();
+                            result = 0;
+                            textBox1.Text = string.Format("{0} $", result);
                             t++;
                             _arr[i, j].Image = img_seat_bought;
                             StreamWriter pilet = new StreamWriter("../../Pilet/" + "Pilet" + t.ToString() + "rida" + i.ToString() + "koht" + j.ToString() + ".txt");
@@ -168,7 +174,7 @@ namespace CinamonCinema
                     }
                     text += "\n";
                 }
-                using (StreamWriter file = new StreamWriter("../../Saal/" + name + ".txt"))
+                using (StreamWriter file = new StreamWriter("../../Pilet/" + name + ".txt"))
                 {
                     file.WriteLine(text);
                     file.Close();
